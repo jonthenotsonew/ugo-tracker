@@ -90,7 +90,7 @@ class HandleTester(unittest.TestCase):
         self.deps = deps
         return
     
-    def testDown(self):
+    def tearDown(self):
         client = self.deps['persist'].get_client()
         client.flushall()
         return
